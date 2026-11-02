@@ -12,7 +12,7 @@ public class App {
         CardLayout cards = new CardLayout();
         JPanel container = new JPanel(cards);
 
-        // ---- Главное меню ----
+        
         JPanel menu = new JPanel(new GridBagLayout());
         menu.setBackground(new Color(112, 197, 206));
         menu.setPreferredSize(new Dimension(logic.frameWidth, logic.frameHeight));
