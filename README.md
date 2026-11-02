@@ -2,7 +2,7 @@
 # Flappy Bird
 Tugas Praktikum 6 DPBO 2026
 
-Janji Saya Bozorov Huseyn (NIM: 2521812) mengerjakan evaluasi Tugas Praktikum 6 dalam mata kuliah Desain dan Pemrograman Berbasis Objek untuk keberkahannya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+Janji Saya Bozorov Huseyn (NIM: 2521812) mengerjakan evaluasi Tugas Praktikum 6 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahannya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 A Flappy Bird game built with Java Swing, featuring a main menu, score counter, Game Over, restart, and sound.
 
