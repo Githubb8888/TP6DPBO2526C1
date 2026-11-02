@@ -51,7 +51,7 @@ public class Logic implements ActionListener, KeyListener {
         });
 
         gameLoop = new Timer(1000 / 60, this);
-        // Таймеры запускаются в startGame() после кнопки Start
+        
 
         bgm = new Sound("assets/bgm.wav");
         jumpSound = new Sound("assets/jump.wav");
@@ -65,7 +65,7 @@ public class Logic implements ActionListener, KeyListener {
     public boolean isGameOver() { return gameOver; }
     public int getScore() { return score; }
 
-    // Запуск / перезапуск игры
+    
     public void startGame() {
         player.setPosX(playerStartPosX);
         player.setPosY(playerStartPosY);
@@ -110,24 +110,24 @@ public class Logic implements ActionListener, KeyListener {
         player.setPosY(player.getPosY() + player.getVelocityY());
         player.setPosY(Math.max(player.getPosY(), 0));
 
-        // Падение на нижнюю границу окна
+        
         if (player.getPosY() + player.getHeight() >= frameHeight) {
             endGame();
             return;
         }
 
-        // Идём с конца, чтобы безопасно удалять трубы
+        
         for (int i = pipes.size() - 1; i >= 0; i--) {
             Pipe pipe = pipes.get(i);
             pipe.setPosX(pipe.getPosX() + pipeVelocityX);
 
-            // Столкновение с трубой
+            
             if (collides(player, pipe)) {
                 endGame();
                 return;
             }
 
-            // +1 очко: считаем только верхние трубы, чтобы не было +2
+           
             if (!pipe.passed && pipe.getImage() == upperPipeImage
                     && player.getPosX() > pipe.getPosX() + pipe.getWidth()) {
                 pipe.passed = true;
@@ -136,7 +136,7 @@ public class Logic implements ActionListener, KeyListener {
                 if (view != null) view.updateScore(score);
             }
 
-            // Удаляем трубы, ушедшие за левый край
+            
             if (pipe.getPosX() + pipe.getWidth() < 0) {
                 pipes.remove(i);
             }
